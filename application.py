@@ -9,7 +9,7 @@ CORS(application)  # Enable CORS for the React Native app
 # Initialize EasyOCR Reader
 reader = easyocr.Reader(['en'])
 
-@application.route('/ocr', methods=['POST'])
+@application.route('/ocr')
 def ocr():
     if 'image' not in request.files:
         return jsonify({'error': 'No image file provided'}), 400
